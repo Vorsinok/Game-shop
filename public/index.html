@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="panel.css">
+  <title>Game shop</title>
+</head>
+
+<body>
+  <script src="/game-shop/src/services/commersApiService.js"></script>
+  <div class="vertical-panel">
+    <div class="panel-item-up">
+      <div class="panel-item" id="shop-button"><img class="vertical-panel-img" src="img/shop.png" alt="магазин" srcset=""
+          draggable="false" style="user-select: none;">
+        <p class="vertical-panel-text">Магазин</p>
+      </div>
+    </div>
+    <div class="panel-item-down">
+      <div class="panel-item"><img class="vertical-panel-img vertical-panel-img-not-standart" src="img/filter.png"
+          alt="сортування" srcset="" draggable="false" style="user-select: none;">
+        <p class="vertical-panel-text">Сортування</p>
+      </div>
+      <div class="panel-item"><img class="vertical-panel-img" src="img/person.png" alt="кабінет" srcset=""
+          draggable="false" style="user-select: none;">
+        <p class="vertical-panel-text">Особстий кабінет</p>
+      </div>
+    </div>
+  </div>
+  <div id="root"></div>
+  <script>
+    window.env = {
+        CMS_DOMAIN: "https://example.com/api"
+    };
+</script>
+</body>
+
+</html>

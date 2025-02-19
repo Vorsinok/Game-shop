@@ -1,0 +1,56 @@
+
+.vertical-panel {
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+.panel-item {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.panel-item:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.vertical-panel-img {
+    width: 30px;
+    height: 30px;
+}
+
+.vertical-panel-img-not-standart {
+    width: 25px;
+    height: 25px;
+}
+
+.vertical-panel-text {
+    font-size: 12px;
+    user-select: none; 
+    cursor: pointer;
+}
+
+.main-container{
+    margin-left: 70px;
+}

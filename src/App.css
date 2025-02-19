@@ -1,0 +1,203 @@
+.App {
+  text-align: center;
+}
+
+#root h1,
+p,
+h2,
+h3 {
+  margin: 0;
+}
+
+#root {
+  padding-left: 70px;
+  background-color: rgb(39, 39, 39);
+  height: 100vh;
+}
+
+.main-title {
+  color: white;
+}
+.product-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item-visible {
+  margin: 20px;
+  width: 400px;
+  height: 220px;
+  background-color: rgb(91, 101, 111);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.product-item:hover .product-item-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product-item-visible:hover + .product-item-hidden {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-item-hidden {
+  position: absolute;
+  margin-left: 433px;
+  margin-top: 20px;
+  width: 200px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.product-item-hidden::before {
+  position: absolute;
+  left: -20px;
+  top: 20%;
+  transform: translateY(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid rgba(0, 0, 0, 0.8);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.product-item:hover .product-item-hidden {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-list-gameName {
+  color: white;
+  padding: 0;
+}
+
+.product-list-price {
+  color: yellow;
+  padding: 0;
+}
+.product-list-mainInformation {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.product-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.product-details-name {
+  padding-bottom: 40px;
+}
+
+.product-details-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.product-details-imgContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+.product-slider {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-details-txtContainer {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  gap: 10px;
+}
+
+.product-details-containerPurchase {
+  background-color: rgb(91, 101, 111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  justify-content: space-between;
+  height: 45px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+
+.product-details-containerPrice {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: black;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.product-details-buttonBuy {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-details-buttonBuy:hover {
+  background-color: #218838;
+}
+
+.product-details-containerConfiguration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 50px;
+  margin-top: 30px;
+}
+.product-details-minimalConfiguration {
+  max-width: 400px;
+}
+.product-details-recommendedConfiguration {
+  max-width: 400px;
+}
+.product-details-configuration{
+  padding-top: 40px;
+  font-size: 20px;
+}
