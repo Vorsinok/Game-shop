@@ -133,9 +133,9 @@ function Api() {
                         currency: "EUR",
                     }
                 ],
-                configuration:[
+                configuration: [
                     {
-                        minimal:[
+                        minimal: [
                             {
                                 OS: "Windows 10 64-bit",
                                 CPU: "Intel Core i5-8400 / AMD Ryzen 5 1600",
@@ -144,7 +144,7 @@ function Api() {
                                 place: "130 GB",
                             }
                         ],
-                        recommended:[
+                        recommended: [
                             {
                                 OS: "Windows 10 64-bit",
                                 CPU: "Intel Core i7-9700 / AMD Ryzen 5 5500",
@@ -239,7 +239,7 @@ function Api() {
          * @returns {void}
          */
 
-        GetCartProducts: function (){
+        GetCartProducts: function () {
             const action = "/cartProducts";
             return {
                 productItems: [{
@@ -255,7 +255,30 @@ function Api() {
                 }
                 ]
             }
+        },
+        /**
+        * Get person info.
+        * @returns {void}
+        */
+
+        GetPersonInfo: function () {
+            const action = "/person";
+            return {
+                personItems: [{
+                    Id: 1,
+                    personName: "Vorsinok",
+                    personImg: [
+                        {
+                            type: "image", //allowed type: image, video  
+                            src: "https://i.pinimg.com/736x/0e/d0/b1/0ed0b1aadf7a7d1ce8ced1aace20daea.jpg",
+                            alt: "avatar",
+                        }
+                    ],
+                    shortInfo: "hi!",
+                }]
+            }
         }
+
     };
 
     //post замокать обьект
@@ -279,7 +302,7 @@ function Api() {
             }
         }
     };
-    
+
 
     /**
      * Category controller.
